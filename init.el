@@ -76,8 +76,8 @@
 
 (require 'init-vc)
 (require 'init-darcs)
-(require 'init-git)
-(require 'init-github)
+;;(require 'init-git)
+;;(require 'init-github)
 
 (require 'init-projectile)
 
@@ -86,7 +86,7 @@
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
-(require 'init-erlang)
+;;(require 'init-erlang)
 (require 'init-javascript)
 (require 'init-php)
 (require 'init-org)
@@ -94,11 +94,11 @@
 (require 'init-html)
 (require 'init-css)
 (require 'init-haml)
-(require 'init-python-mode)
+;;(require 'init-python-mode)
 (unless (version<= emacs-version "24.3")
   (require 'init-haskell))
 (require 'init-elm)
-(require 'init-ruby-mode)
+;;(require 'init-ruby-mode)
 (require 'init-rails)
 (require 'init-sql)
 
