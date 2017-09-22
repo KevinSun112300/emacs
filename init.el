@@ -42,12 +42,13 @@
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
 
+
 (require-package 'wgrep)
 (require-package 'project-local-variables)
 (require-package 'diminish)
 (require-package 'scratch)
 (require-package 'command-log-mode)
-
+(require 'init-java)
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
