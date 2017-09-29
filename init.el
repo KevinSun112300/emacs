@@ -48,7 +48,13 @@
 (require-package 'diminish)
 (require-package 'scratch)
 (require-package 'command-log-mode)
+
+
+
+;;(require 'init-rtags)
 (require 'init-java)
+
+
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
@@ -158,7 +164,10 @@
 
 (when (maybe-require-package 'uptimes)
   (add-hook 'after-init-hook (lambda () (require 'uptimes))))
-
+;;----------------------------------------------------------------------------
+;; myconfig
+;;----------------------------------------------------------------------------
+(require 'init-rtags)
 
 (provide 'init)
 
