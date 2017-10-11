@@ -135,9 +135,11 @@
 ;; ----------------------------------------------------------------------------
 ;; Enable desired features for all lisp modes
 ;; ----------------------------------------------------------------------------
-(require-package 'redshank)
+(when (not (eq system-type 'cygwin))
+  ((require-package 'redshank)
 (after-load 'redshank
-  (diminish 'redshank-mode))
+  (diminish 'redshank-mode))))
+
 
 (defun sanityinc/enable-check-parens-on-save ()
   "Run `check-parens' when the current buffer is saved."
@@ -154,6 +156,9 @@
     sanityinc/disable-indent-guide
     sanityinc/enable-check-parens-on-save)
   "Hook run in all Lisp modes.")
+(when (eq system-type 'cygwin)
+  (setf sanityinc/lispy-modes-hook (remove 'redshank-mode sanityinc/lispy-modes-hook)))
+
 
 
 (when (maybe-require-package 'aggressive-indent)

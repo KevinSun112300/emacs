@@ -89,7 +89,10 @@
 (require 'init-projectile)
 
 (require 'init-compile)
-(require 'init-crontab)
+(when (not (eq system-type 'cygwin))
+  (require 'init-crontab))
+
+
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
